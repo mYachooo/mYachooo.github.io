@@ -29,7 +29,7 @@ const auth = getAuth(app);
 // --- Zmienne Globalne ---
 let currentUser = null; // Przechowuje stan zalogowanego użytkownika
 // ZASTĄP TO PRAWDZIWYM UID ADMINISTRATORA z konsoli Firebase!
-const ADMIN_UID = "TUTAJ_WKLEJ_UID_ADMINA";
+const ADMIN_UID = "UrixrbXqwKMNYJPjGYxM3SzBNSY2";
 
 // Poczekaj na załadowanie DOM
 document.addEventListener('DOMContentLoaded', () => {
