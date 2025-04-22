@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const newScoreData = { white: whitePlayer, black: blackPlayer, result: result, date: gameDate, notes: notes, registeredBy: registeredBy };
-
+        console.log("Dane do zapisu:", newScoreData)
         push(scoresRef, newScoreData)
             .then(() => { console.log("Wpis dodany (v9)."); scoreForm.reset(); setTodayDate(); })
             .catch((error) => { console.error("Błąd zapisu (v9):", error); alert("Nie udało się zapisać wyniku. Sprawdź Reguły Bezpieczeństwa."); });
