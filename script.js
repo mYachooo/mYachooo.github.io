@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 deleteBtn.textContent = 'Usuń';
                 deleteBtn.classList.add('delete-btn');
                 // Usunięcie NIE wymaga już hasła - weryfikacja będzie w Regułach Firebase
-                deleteBtn.onclick = () => deleteScoreFromFirebase(score.id);
+                deleteBtn.onclick = () => confirmAndDelete(score.id);
                 actionCell.appendChild(deleteBtn);
             } else {
                 // Można zostawić pustą komórkę lub dodać np. myślnik
