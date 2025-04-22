@@ -1,0 +1,131 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+#add-score-form {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Aby padding nie powiększał elementu */
+}
+
+textarea {
+    resize: vertical; /* Pozwól tylko na zmianę wysokości */
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+.table-container {
+     overflow-x: auto; /* Dodaje poziomy scrollbar gdy tabela jest za szeroka */
+}
+
+#scores-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#scores-table th,
+#scores-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+#scores-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+#scores-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#scores-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Prosty przycisk usuwania (jeśli dodasz tę funkcjonalność) */
+.delete-btn {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.delete-btn:hover {
+    background-color: #c9302c;
+}
+
+/* Dostosowanie wyglądu notatek w tabeli */
+#scores-table td:nth-child(5) { /* Kolumna Notatki */
+    white-space: pre-wrap; /* Zachowaj białe znaki i zawijaj tekst */
+    word-break: break-word; /* Łam słowa jeśli są za długie */
+    max-width: 250px; /* Ogranicz szerokość kolumny notatek */
+}

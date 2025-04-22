@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notatnik Szachowy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Notatnik Szachowy</h1>
+
+        <form id="add-score-form">
+            <h2>Dodaj nową partię</h2>
+            <div class="form-group">
+                <label for="white-player">Białe:</label>
+                <input type="text" id="white-player" required>
+            </div>
+            <div class="form-group">
+                <label for="black-player">Czarne:</label>
+                <input type="text" id="black-player" required>
+            </div>
+            <div class="form-group">
+                <label for="result">Wynik:</label>
+                <select id="result" required>
+                    <option value="1-0">1-0 (Białe wygrały)</option>
+                    <option value="0-1">0-1 (Czarne wygrały)</option>
+                    <option value="1/2-1/2">½-½ (Remis)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="game-date">Data:</label>
+                <input type="date" id="game-date" required>
+            </div>
+            <div class="form-group">
+                <label for="notes">Notatki (opcjonalnie):</label>
+                <textarea id="notes" rows="3"></textarea>
+            </div>
+            <button type="submit">Zapisz Partię</button>
+        </form>
+
+        <h2>Zapisane Partie</h2>
+        <div class="table-container">
+             <table id="scores-table">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Białe</th>
+                        <th>Czarne</th>
+                        <th>Wynik</th>
+                        <th>Notatki</th>
+                        <th>Akcje</th> <!-- Kolumna na przyszłe akcje np. usuń -->
+                    </tr>
+                </thead>
+                <tbody id="scores-tbody">
+                    <!-- Wiersze z wynikami będą dodawane tutaj przez JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
