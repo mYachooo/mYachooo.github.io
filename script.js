@@ -225,6 +225,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Inicjalizacja ---
     setTodayDate();
     scoreForm.addEventListener('submit', addScore);
+      // *** NOWA FUNKCJA: Potwierdzenie usunięcia ***
+    const confirmAndDelete = (idToDelete) => {
+        // Wyświetl standardowe okno dialogowe przeglądarki
+        const wantsToDelete = confirm("Czy na pewno chcesz usunąć ten wpis?");
     // Dodaj listenery do przycisków logowania/wylogowania
     loginButton.addEventListener('click', handleLogin);
     logoutButton.addEventListener('click', handleLogout);
